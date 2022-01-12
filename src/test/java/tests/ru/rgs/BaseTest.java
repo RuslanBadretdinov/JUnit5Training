@@ -22,10 +22,10 @@ public class BaseTest {
     void before() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
-        actions = new Actions(driver);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 30, 2000);
+        actions = new Actions(driver);
     }
 
     @AfterEach
